@@ -11,15 +11,15 @@ data <- read.xlsx('data/WHDT 2013 Selected Indicators.xlsx',
           header = FALSE)
 
 data <- data.frame(t(data), row.names = NULL)
-data <- data.frame(data[2:22, ], row.names = NULL)
+indicator_list <- data.frame(data[2:22, ], row.names = NULL)
 
 # Adding names to the columns. 
 names_correct <- c('indicator', 'source', 'period')
-names(data) <- names_correct
+names(indicator_list) <- names_correct
 
 # Writing CSV of the list.
 dir.create('table')
-write.csv(data, 'table/list_of_indicators.csv', row.names = F)
+write.csv(indicator_list, 'table/list_of_indicators.csv', row.names = F)
 
 
 ## Creating the country list. ## 

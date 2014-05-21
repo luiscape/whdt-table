@@ -1,91 +1,1 @@
-"country_name","iso3"
-"Afghanistan","AFG"
-"Albania",NA
-"Armenia","ARM"
-"Bangladesh","BGD"
-"Belize","BLZ"
-"Benin","BEN"
-"Bhutan","BTN"
-"Bolivia","BOL"
-"Burkina Faso","BFA"
-"Burundi","BDI"
-"Cambodia","KHM"
-"Cameroon","CMR"
-"Cape Verde",NA
-"Central African Republic","CAF"
-"Chad","TCD"
-"Comoros","COM"
-"Congo","COG"
-"Cote d'Ivoire","CIV"
-"Djibouti","DJI"
-"Democratic People's Republic of Korea","KOR"
-"Democratic Republic of the Congo","COG"
-"Egypt","EGY"
-"El Salvador","SLV"
-"Eritrea","ERI"
-"Ethiopia","ETH"
-"Fiji","FJI"
-"Gambia","GMB"
-"Georgia","GEO"
-"Ghana","GHA"
-"Guatemala","GTM"
-"Guinea","GIN"
-"Guinea-Bissau","GNB"
-"Guyana","GUY"
-"Haiti","HTI"
-"Honduras","HND"
-"India","IND"
-"Indonesia","IDN"
-"Iraq","IRQ"
-"Kenya","KEN"
-"Kiribati","KIR"
-"Kosovo",NA
-"Kyrgyzstan","KGZ"
-"Lao People's Democratic Republic","LAO"
-"Lesotho","LSO"
-"Liberia","LBR"
-"Madagascar","MDG"
-"Malawi","MWI"
-"Mali","MLI"
-"Marshall Islands","MHL"
-"Mauritania","MRT"
-"Micronesia","FSM"
-"Moldova",NA
-"Mongolia","MNG"
-"Morocco","MAR"
-"Mozambique","MOZ"
-"Myanmar","MMR"
-"Nepal","NPL"
-"Nicaragua","NIC"
-"Niger","NER"
-"Nigeria","NGA"
-"occupied Palestinian territory","PSE"
-"Pakistan","PAK"
-"Papua New Guinea","PNG"
-"Paraguay","PRY"
-"Philippines","PHL"
-"Rwanda","RWA"
-"Samoa","WSM"
-"Sao Tome and Principe",NA
-"Senegal","SEN"
-"Sierra Leone","SLE"
-"Solomon Islands","SLB"
-"Somalia","SOM"
-"South Sudan","SSD"
-"Sri Lanka","LKA"
-"Sudan (the)","SDN"
-"Swaziland","SWZ"
-"Syrian Arab Republic","SYR"
-"Tajikistan","TJK"
-"United Republic of Tanzania","TZA"
-"Timor-Leste",NA
-"Togo","TGO"
-"Tonga","TON"
-"Uganda","UGA"
-"Ukraine",NA
-"Uzbekistan","UZB"
-"Vanuatu","VUT"
-"Vietnam","VNM"
-"Yemen","YEM"
-"Zambia","ZMB"
-"Zimbabwe","ZWE"
+country_name,iso3Afghanistan,AFGAlbania,ALBArmenia,ARMBangladesh,BGDBelize,BLZBenin,BENBhutan,BTNBolivia,BOLBurkina Faso,BFABurundi,BDICambodia,KHMCameroon,CMRCabo Verde,CPVCentral African Republic,CAFChad,TCDComoros,COMCongo,COGCote d'Ivoire,CIVDjibouti,DJIDemocratic People's Republic of Korea,KORDemocratic Republic of the Congo,COGEgypt,EGYEl Salvador,SLVEritrea,ERIEthiopia,ETHFiji,FJIGambia,GMBGeorgia,GEOGhana,GHAGuatemala,GTMGuinea,GINGuinea-Bissau,GNBGuyana,GUYHaiti,HTIHonduras,HNDIndia,INDIndonesia,IDNIraq,IRQKenya,KENKiribati,KIRKosovo,UNKKyrgyzstan,KGZLao People's Democratic Republic,LAOLesotho,LSOLiberia,LBRMadagascar,MDGMalawi,MWIMali,MLIMarshall Islands,MHLMauritania,MRTMicronesia,FSMRepublic of Moldova,MDAMongolia,MNGMorocco,MARMozambique,MOZMyanmar,MMRNepal,NPLNicaragua,NICNiger,NERNigeria,NGAoccupied Palestinian territory,PSEPakistan,PAKPapua New Guinea,PNGParaguay,PRYPhilippines,PHLRwanda,RWASamoa,WSMSao Tome and Principe,STPSenegal,SENSierra Leone,SLESolomon Islands,SLBSomalia,SOMSouth Sudan,SSDSri Lanka,LKASudan (the),SDNSwaziland,SWZSyrian Arab Republic,SYRTajikistan,TJKUnited Republic of Tanzania,TZATimor-Leste,TLSTogo,TGOTonga,TONUganda,UGAUkraine,UKRUzbekistan,UZBVanuatu,VUTVietnam,VNMYemen,YEMZambia,ZMBZimbabwe,ZWE
