@@ -62,15 +62,12 @@ for (i in 1:nrow(url_list)) {
                              ")")
     
     # Assembles the final table.
-    if (i == 1) { final_table <<- y }
-    else { final_table <<- merge(final_table, y, by = "Country_code",
+    if (i == 1) { method1_table <<- y }
+    else { method1_table <<- merge(method1_table, y, by = "Country_code",
                                  all = TRUE) 
     }
     
     dbDisconnect(db)
     
 } 
-
-dir.create('final_table')
-write.csv(final_table, file = "final_table/final_table.csv", row.names = F)
 
