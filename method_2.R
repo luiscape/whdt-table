@@ -12,9 +12,10 @@
 library(WDI)
 library(hdxdictionary)
 
+## List of indicators fetched. 
 # UNDP.HDI.XD -- Human development index. 
 # NY.GDP.MKTP.KD.ZG -- GDP growth (annual %)
-# SP.POP.DDAY.TO -- Number of people living on less than $1.25 a day (PPP) ## error here
+### SI.POV.DDAY -- Poverty headcount ratio at $1.25 a day (PPP) (% of population)
 # SH.STA.MALN.ZS -- "Malnutrition prevalence, weight for age (% of children under 5)
 # SP.DYN.LE00.IN -- Life expectancy at birth, total (years)
 # SH.MED.PHYS.ZS -- Physicians (per 1,000 people)
@@ -33,8 +34,7 @@ for(i in 1:length(wb_indicators)) {
     
     # Fetching the data.
     name <- WDIsearch(wb_indicators[i], field = "indicator")
-    if (i == 3) { }
-    else { 
+
         x <- WDI(iso2, wb_indicators[i]) 
         latest_year <- x$year[1]
         
@@ -48,16 +48,5 @@ for(i in 1:length(wb_indicators)) {
         # Merging data.frame.
         if (i == 1) { method2_table <<- x }
         else { method2_table <<- merge(method2_table, x, by = "iso2c", all = TRUE) }
-    }
 } 
-
-
-colnames(method1_table)[1] <- 'iso3'
-colnames(method2_table)[1] <- 'iso2'
-
-method2_table <- merge(method2_table, country_list, by = "iso2")
-
-final_table <- merge(method1_table, method2_table, by = "iso3", all = TRUE)
-
-
 
