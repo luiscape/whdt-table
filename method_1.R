@@ -70,4 +70,3 @@ for (i in 1:nrow(url_list)) {
     dbDisconnect(db)
     
 } 
-
