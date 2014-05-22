@@ -50,3 +50,7 @@ for(i in 1:length(wb_indicators)) {
         else { method2_table <<- merge(method2_table, x, by = "iso2c", all = TRUE) }
 } 
 
+colnames(method1_table)[1] <- 'iso3'
+colnames(method2_table)[1] <- 'iso2'
+
+method2_table <- merge(method2_table, country_list, by = "iso2")
