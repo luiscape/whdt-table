@@ -41,7 +41,7 @@
 		
 		<?php
 			// echo "<table>\n\n";
-			$f = fopen("data.csv", "r");
+			$f = fopen("https://raw.githubusercontent.com/luiscape/whdt-table/gh-pages/data.csv", "r");
 			while (($line = fgetcsv($f)) !== false) {
 			        echo "<tr>";
 			        foreach ($line as $cell) {
