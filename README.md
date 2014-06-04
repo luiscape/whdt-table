@@ -6,6 +6,19 @@ The OCHA publication World Humanitarian Data & Trends makes use of a table at th
 Current progress: 0 |============ _________| 65%
 
 
+Missing Indicators
+------------------
+At the moment, the following indicators haven't been added
+- Number of people targeted for humanitarian assistance in inter-agency appeals
+- Proportion of the population affected annually by natural disasters (10 years average %)
+- Number of last 10 years experiencing conflict
+- Total population of concern to UNHCR
+- Number of people living below US$ 1.25 per day (million)
+- Government revenues per capita (US$)
+- Official Development Assistance per capita (US$)
+- Humanitarian Funding received (US$ million)
+
+
 Notes
 -----
 
