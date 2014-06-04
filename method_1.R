@@ -36,8 +36,9 @@ for (i in 1:nrow(url_list)) {
     
     db <- dbConnect(SQLite(), dbname="indicator_data/db.sqlite")
     
-    dbWriteTable(db, paste0("'",name,"'"), y, row.names = FALSE, overwrite = TRUE)
-    
+    if (name %in% dbListTables(db) == FALSE) {
+        dbWriteTable(db, paste0("'",name,"'"), y, row.names = FALSE, overwrite = TRUE)
+    }
     # for testing purposes
     # test <- dbListTables(db)
     dbDisconnect(db)
@@ -52,21 +53,27 @@ for (i in 1:nrow(url_list)) {
     name <- as.character(url_list$indicator[i])
     
     # Read the table from the db.
-    x <- dbReadTable(db, paste0("'", name, "'"))
+    x <- dbReadTable(db, paste("'", name, "'", sep = ""))
     
     # Exctracts only the latest year.
-    y <<- x[, 1:3]
+    ind_prob <- 'Impact of natural disasters: population affected (average per year-million)'
+    if (url_list$indicator[i] == ind_prob) y <- x[, 1:2]
+    else y <- x[, 1:3]
     y$Country_name <- NULL
-    colnames(y)[2] <- paste0(name, " (", 
-                             gsub("X", "", colnames(y)[2]),
-                             ")")
+    
+    if (url_list$indicator[i] == ind_prob) { 
+        colnames(y)[2] <- paste(name, "(2013)") 
+    }
+    else { 
+        colnames(y)[2] <- paste0(name, " (", 
+                                 gsub("X", "", colnames(y)[2]),
+                                 ")")
+    }
     
     # Assembles the final table.
     if (i == 1) { method1_table <<- y }
     else { method1_table <<- merge(method1_table, y, by = "Country_code",
                                  all = TRUE) 
     }
-    
-    dbDisconnect(db)
-    
+    dbDisconnect(db)  
 } 

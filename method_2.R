@@ -20,6 +20,8 @@ library(hdxdictionary)
 # SP.DYN.LE00.IN -- Life expectancy at birth, total (years)
 # SH.MED.PHYS.ZS -- Physicians (per 1,000 people)
 # IT.CEL.SETS.P2 -- Mobile cellular subscriptions (per 100 people)
+# DT.ODA.ALLD.PC.ZS -- Net ODA received per capita (current US$)
+# SP.POP.DDAY.TO -- Number of people living on less than $1.25 a day (PPP)
 
 # Fetchig the country list.
 country_list <- read.csv('table/list_of_countries.csv')
@@ -35,19 +37,22 @@ for(i in 1:length(wb_indicators)) {
     # Fetching the data.
     name <- WDIsearch(wb_indicators[i], field = "indicator")
 
-        x <- WDI(iso2, wb_indicators[i]) 
-        latest_year <- x$year[1]
+        if (wb_indicators[i] == 'SP.POP.DDAY.TO') next
+        else { 
+            x <- WDI(iso2, wb_indicators[i])
+            latest_year <- x$year[1]
         
-        x <- subset(x, (year == latest_year))
-        x$year <- NULL
-        x$country <- NULL
+            x <- subset(x, (year == latest_year))
+            x$year <- NULL
+            x$country <- NULL
         
-        # Naming.
-        colnames(x)[2] <- paste0(as.character(name[2]), " (", latest_year, ")")
-        
-        # Merging data.frame.
-        if (i == 1) { method2_table <<- x }
-        else { method2_table <<- merge(method2_table, x, by = "iso2c", all = TRUE) }
+            # Naming.
+            colnames(x)[2] <- paste0(as.character(name[2]), " (", latest_year, ")")
+            
+            # Merging data.frame.
+            if (i == 1) { method2_table <<- x }
+            else { method2_table <<- merge(method2_table, x, by = "iso2c", all = TRUE) }
+        }
 } 
 
 colnames(method1_table)[1] <- 'iso3'
