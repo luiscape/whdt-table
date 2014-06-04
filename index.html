@@ -28,7 +28,7 @@
 		// outputs e.g.  somefile.txt was last modified: December 29 2002 22:16:23.
 		date_default_timezone_set('America/Los_Angeles');
 		
-		$filename = 'data.csv';
+		$filename = 'https://raw.githubusercontent.com/luiscape/whdt-table/gh-pages/data.csv';
 		if (file_exists($filename)) {
 		    echo "This page was generated at: " . date ("F d Y H:i.", filemtime($filename));
 		}
